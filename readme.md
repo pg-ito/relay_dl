@@ -24,3 +24,4 @@ TODO
 - [ ] port configurable  
 - [ ] limit the max thread
 - [ ] request timeout
+- [ ] cancel thread
