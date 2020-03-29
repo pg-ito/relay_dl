@@ -8,8 +8,6 @@ namespace relay_dl
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
             DlServer sv = new DlServer();
             if (args.Length > 0) {
                 sv.Docroot = args[0];
