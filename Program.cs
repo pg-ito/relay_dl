@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace relay_dl
 {
@@ -8,9 +9,12 @@ namespace relay_dl
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            // DlListener dl = new DlListener("10.0.1.29");
-            // dl.Start();
+
             DlServer sv = new DlServer();
+            if (args.Length > 0) {
+                sv.Docroot = args[0];
+            }
+            Task.Run(sv.Listen).Wait();// @TODO Cancel
         }
     }
 }
